@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ATM_11399",
+            "request": "launch",
+            "mainClass": "ATM_11399"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - java",
             "request": "launch",
             "mainClass": "java"
