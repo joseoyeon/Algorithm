@@ -65,7 +65,7 @@ double Knapsack(double (*data)[COLUMN_NUM]) {
     double sortlist[DATA_SIZE][2];
 
 
-//단위 무게당 가치를 계산. data 0: 가치 1: 무게// sortlist 0 : 단위 무게당 가치 1: 무게
+//단위 무게당 가치를 계산. data 0: 가치 1: 무게 // sortlist 0 : 단위 무게당 가치 1: 무게
     for (i=0; i<DATA_SIZE; i++){
         sortlist[i][0] = (double)(data[i][0]/data[i][1]);
         sortlist[i][1] = data[i][1];
@@ -73,7 +73,7 @@ double Knapsack(double (*data)[COLUMN_NUM]) {
 
 //버블 정렬
 for(int j=0; j<DATA_SIZE; j++){
-    for(i=0; i<DATA_SIZE; i++){
+    for(i=0; i<j; i++){
         if(sortlist[i][0] < sortlist[i+1][0]){
             temp = sortlist[i][0];
             sortlist[i][0]= sortlist[i+1][0];
