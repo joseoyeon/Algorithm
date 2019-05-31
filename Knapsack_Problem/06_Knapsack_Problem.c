@@ -28,7 +28,7 @@ int main()
 void read_data(double(*quiz)[COLUMN_NUM], const char* fileDir)
 {
 	FILE* fp;
-	char buffer[DATA_SIZE * COLUMN_NUM];
+	char *buffer[DATA_SIZE * COLUMN_NUM];
 	char* ptr;
 	int i = 0, j = 0;
 
@@ -42,17 +42,17 @@ void read_data(double(*quiz)[COLUMN_NUM], const char* fileDir)
 	}
 
 	for (i = 0; i < DATA_SIZE; i++)
-	{
+	{   
 		fgets(buffer, DATA_SIZE * COLUMN_NUM, fp);
-		ptr = strtok(buffer, ",");
-		j = 0;
-
-		while (ptr != NULL)
-		{
+		ptr = strtok([buffer], ",");
+		j=0;
+        while (ptr != NULL)
+		    {
 			quiz[i][j] = atof(ptr);
 			ptr = strtok(NULL, ",");
-			j++;
-		}
+		    j++;
+            }
+        }
 	}
 
 	fclose(fp);
