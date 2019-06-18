@@ -7,6 +7,7 @@
 
 int main(void)
 {
+	/*파일을 불러온다.*/
 	FILE* fp;
 	int i,j = 0;
 	char data_1 = 0;
