@@ -7,7 +7,6 @@
 
 int main(void)
 {
-	/*파일을 불러온다.*/
 	FILE* fp;
 	int i,j = 0;
 	char data_1 = 0;
@@ -28,7 +27,7 @@ int main(void)
 			{
 				cnt++;
 				i = 0;
-				puts(buf);//printf
+				puts(buf);
 			}
 			else
 			{
@@ -40,7 +39,6 @@ int main(void)
 
 	fclose(fp);
 
-    
 	return 0;
 }
 

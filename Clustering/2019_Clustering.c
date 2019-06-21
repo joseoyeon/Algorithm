@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 #include <math.h>
 
 #define DATA_SIZE 150
@@ -22,19 +23,22 @@ int main()
 //printf("%f %f %f %f", data[0][0],data[0][1],data[0][2],data[0][3]);
   
    /*init Clusters*/
-    double Ocenter[K][COLUMN_NUM]={0,};// 랜덤하게 선택된 센터 : 예전값
-    double Ncenter[K][COLUMN_NUM]={0,}; // 새로운 센터 값
+    double Ocenter[K][COLUMN_NUM];// 랜덤하게 선택된 센터 : 예전값
+    double Ncenter[K][COLUMN_NUM]; // 새로운 센터 값
     int Kx[DATA_SIZE]={0,};// i 번째 점이 속한 클러스터 값
     int i,j,k;
 
+     srand(time(NULL));
+        i = rand()%145;
    // 1. k개의 임의의 센터를 정한다.
        for (k=0;k<K; k++){
-            i = rand()%DATA_SIZE;
         for(j=0; j<4; j++){
             Ocenter[k][j] = X[i][j];
             Ncenter[k][j] =0;
          }
+         i++;
        }
+    printf("Ocenter: \n");
     printcenter(Ocenter);
     printf("\n");
 
