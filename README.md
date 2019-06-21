@@ -1,3 +1,3 @@
 # Algorithm
 
-This is c Algorithm code repository
+This is Algorithm repository for c or cpp
