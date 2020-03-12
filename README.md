@@ -6,6 +6,9 @@ This is Algorithm repository for c or cpp
     * Greedy_1138	
     * Greedy_2217	
 
+### 세그먼트 알고리즘
+    * segment_1777
+    
 ### 암호 알고리즘 
     * ARIA
     * RSA
