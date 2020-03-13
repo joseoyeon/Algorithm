@@ -9,6 +9,9 @@ This is Algorithm repository for c or cpp
 ### 세그먼트 알고리즘
     * segment_1777
     
+### BFS
+    * 구슬 탈출 13460
+    
 ### 암호 알고리즘 
     * ARIA
     * RSA
@@ -33,4 +36,3 @@ This is Algorithm repository for c or cpp
     * count_2577	
     * kruskalMST	
     * search_algorithm_time
-    * 구슬 탈출 13460
