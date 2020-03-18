@@ -7,7 +7,7 @@ This is Algorithm repository for c or cpp
     * Greedy_2217	
 
 ### 세그먼트 알고리즘
-    * segment_1777
+    * segment 1777
     
 ### BFS
     * 구슬 탈출 13460
@@ -16,8 +16,12 @@ This is Algorithm repository for c or cpp
     * ARIA
     * RSA
     * LEA
+    * Caesar 5598
+
+### 정수론
+    * 유클리드 4342
     
-### 백준 실습 알고리즘
+### 백준 실습 및 알고리즘 공부
     * 0-1_knapsack	
     * 1085    	
     * 1550	
