@@ -8,7 +8,13 @@ This is Algorithm repository for c or cpp
 
 ### 세그먼트 알고리즘
     * segment 1777
-    
+
+### 다이나믹 알고리즘
+    * 11726
+    * 11727
+    * 2133
+    * 14852
+
 ### BFS
     * 구슬 탈출 13460
     
@@ -22,6 +28,10 @@ This is Algorithm repository for c or cpp
     * 유클리드 4342
     
 ### 백준 실습 및 알고리즘 공부
+    * 11726
+    * 11727
+    * 2133
+    * 14852
     * 0-1_knapsack	
     * 1085    	
     * 1550	

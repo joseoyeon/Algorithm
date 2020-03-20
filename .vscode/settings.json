@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "functional": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
