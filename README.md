@@ -56,7 +56,9 @@ This is Algorithm repository for c or cpp
 
 
     ## seoultech
+
  [seoultech](http://203.246.84.124:1443/)
+
     * fibonacci
     * big number
-    * quicsort 
+    * quicksort 

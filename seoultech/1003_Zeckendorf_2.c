@@ -26,6 +26,7 @@ long long int chi(int n) {
         if (n==3) {result += 2; break;}
         if (n==1) {result += 1; break;}
         if (n==2) {result += 1; break;}
+        if (n==4) {result += 3; break;}
 
         if (fibo(i-1) < n && n <= fibo(i)){
             if(n == fibo(i)){
