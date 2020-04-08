@@ -1,3 +1,4 @@
+// 좀 이상한데...?
 # include<stdio.h>
 # include<stdlib.h>
 int main() {
