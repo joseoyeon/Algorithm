@@ -1,5 +1,5 @@
 # include<stdio.h>
-
+# include<stdlib.h>
 int main() {
     int a[4097];
     int b[4097];
@@ -8,6 +8,7 @@ int main() {
     char Res[4098];
     char res [4098];
     int carry = 0 ;
+    char s;
 
     scanf("%d",&num);
     for (int i=0; i<num; i++) {scanf("%1d",&a[i]);}
@@ -20,8 +21,13 @@ int main() {
         else  {carry =0;}
     }
     
-    if(carry == 1) {Res[0] = 1;}
-    //for (int i = 0; i <=num; i++) {printf(res, "%d", Res);}
-    printf("%s", *Res);
+    if(carry == 1) {Res[0] = 1; s = 0;}
+    else {Res[0] =0; s=1;}
+    for (int i = 0 +s; i <=num; i++) {
+        printf("%d", Res[i]);
+        //res[i] = Res[i] + 48;
+    }
+    // if (res[num] == 48) res[num] =0;
+    //     printf("%s", res);
     return 0;
 }
