@@ -2,6 +2,8 @@
 
 This is Algorithm repository for c or cpp
 
+## BOJ
+
 ### 그리디 알고리즘
     * Greedy_1138	
     * Greedy_2217	
@@ -51,3 +53,10 @@ This is Algorithm repository for c or cpp
     * count_2577	
     * kruskalMST	
     * search_algorithm_time
+
+
+    ## seoultech
+ [seoultech](http://203.246.84.124:1443/)
+    * fibonacci
+    * big number
+    * quicsort 
