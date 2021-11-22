@@ -3,5 +3,6 @@
         "stdio.h": "c",
         "functional": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "code-runner.runInTerminal": true
 }
