@@ -1,7 +1,19 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "functional": "cpp"
+        "functional": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "iterator": "cpp",
+        "cstdio": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "code-runner.runInTerminal": true
