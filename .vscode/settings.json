@@ -13,7 +13,11 @@
         "initializer_list": "cpp",
         "utility": "cpp",
         "iterator": "cpp",
-        "cstdio": "cpp"
+        "cstdio": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "random": "cpp",
+        "cmath": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "code-runner.runInTerminal": true
