@@ -1,37 +1,37 @@
-#include <bits/stdc++.h>
+#include<iostream>
+#include<string>
+#include<vector>
 using namespace std;
-int n, m, a, b, c;
-// 정점1, 정점2, 비용 c
-struct edge { int x, y, c; };
-// 비용이 작은 순으로 정렬할 것 
-bool cmp(edge u, edge v) { return u.c < v.c; }
-vector<edge> g;
-int par[1001];
- 
-// 유니온 파인드
-int find(int x) {
-    if (par[x] == x)return x;
-    else return par[x] = find(par[x]);
-}
- 
-int main() {
-    cin >> n >> m;
-    while (m--) {
-        cin >> a >> b >> c;
-        // 어차피 a=b면 사이클이므로 필요없음
-        if (a != b) {
-            g.push_back({ a,b,c });
-        }
-    }
-    sort(g.begin(), g.end(), cmp);
-    for (int i = 1; i <= n; i++)par[i] = i;
 
-    int ans = 0;
-    for (edge E : g) {
-        if (find(E.x) != find(E.y)) {
-            par[find(E.y)] = find(E.x);
-            ans += E.c;
-        }
-    }
-    cout << ans << '\n';
+string s1;
+string s2;
+string LCS[1001][1001];
+
+int main()
+{
+	cin >> s1;
+	cin >> s2;
+
+	for (int i = 1; i <= s1.length(); i++)
+	{
+		for (int j = 1; j <= s2.length(); j++)
+		{
+			if (s1[i-1] == s2[j-1])
+			{	// 왼쪽 대각 위의 LCS에서 이어 붙히기
+				LCS[i][j] = LCS[i-1][j-1] + s1[i-1];
+			}
+			else
+			{	// 왼쪽 LCS와 위쪽 LCS중 긴 LCS를 가져오기
+				if(LCS[i-1][j].length() >= LCS[i][j-1].length())
+					LCS[i][j] = LCS[i-1][j];
+				else // (LCS[i-1][j] < LCS[i][j-1])
+					LCS[i][j] = LCS[i][j-1];
+			}
+		}
+	}
+
+	cout << LCS[s1.length()][s2.length()].length() << '\n';
+	cout << LCS[s1.length()][s2.length()] <<'\n';
+
+
 }

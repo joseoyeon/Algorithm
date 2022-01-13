@@ -1,55 +1,46 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
+#define MAX 100000
 using namespace std;
-const int MAX = 100001;
-typedef long long ll;
+int parent[MAX];
+int saveweight[MAX];
 
-int N, M, Root[MAX];
-ll dist[MAX];
-// Find 변형
-int Update(int x){
-	if(Root[x]==x) return x;
-	int R = Update(Root[x]);
-	// Root 까지 비용 업데이트 
-	dist[x] += dist[Root[x]];
-	return Root[x] = R;
+int getparent(int a) {
+	if(parent[x] == x) return x;
+	return parent[x] = getparent(parent[x]); 
 }
-// Union 변형
-void merge(int a, int b, int diff){
-	int aRoot = Root[a];
-	int bRoot = Root[b];
-	if(aRoot == bRoot) return;
-	// aRoot 기준 b 의 위치
-	int NewD = dist[a]+diff;
-	// bRoot 기준 b 의 위치
-	int OriginD = dist[b];	
-	// bRoot 를 aRoot 으로 재조정
-	Root[bRoot] = aRoot;
-	// 기존 bRoot 에서 aRoot의 거리
-	dist[bRoot] = NewD - OriginD;
+
+int merge(int a, int b){
+	int pa = getparent(a);
+	int pb = getparent(b);
+	if(pa > pb) {parent[a] = pb;}
+	else { parent[b] = pa; }
 }
-int main(){ios_base::sync_with_stdio(false); cout.tie(NULL); cin.tie(NULL);
-while(1){
-	cin >> N >> M;
-	if(N==0&&M==0) break;
-	for (int i = 1; i <= N; ++i){
-		Root[i] = i;
-		dist[i] = 0;
+
+int main() {
+	ios::sync_with_stdio(false); 
+	cin.tie(0); cout.tie(0);
+	int n,m;
+	cin >> n >> m;
+	char c;
+	int a,b,w;
+
+	for(int i=0; i<n;i++){
+		parent[i] = i;
 	}
-	for (int i = 0; i < M; ++i){
-		char ch;
-		int a, b, w;
-		cin >> ch >> a >> b;
-		Update(a);
-		Update(b);
-		if(ch == '!'){
-			cin >> w;
-			merge(a,b,w);
+
+	while(m--) {
+		cin >> c >> a >>b >> w;
+		if(c == '?') {
+			if(getparent(a) == getparent(b)){
+				
+			}else {
+				cout << "UNKNOWN" << endl;
+			}
 		}
-		else{
-			if(Root[a]==Root[b]) cout << dist[b] - dist[a] << '\n';
-			else cout << "UNKNOWN" << '\n';
+		if(c == '!'){
+			merage(a,b);
+
 		}
 	}
-}
-return 0;
+	return 0;
 }
